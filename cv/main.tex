@@ -1,0 +1,339 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% My CV
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.37\textwidth} % 37% of the page width for name
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	% If your name is very short, use just one of the lines below
+	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
+  \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Magnus}}}}} % First name
+
+  \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Bergmark}}}}} % Last name
+
+	\vspace{6pt}
+
+  {\huge Software Craftsman} % Career or current job title
+\end{minipage}
+\begin{minipage}[t]{0.345\textwidth} % 34.5% of the page width for the first row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+  \icon{MapMarker}{12}{Stockholm, Sweden}\\
+	\icon{Phone}{12}{+46 70 43 777 42}\\
+  \icon{At}{12}{\href{mailto:magnus.bergmark@gmail.com}{magnus.bergmark@gmail.com}}\\	
+\end{minipage}
+\begin{minipage}[t]{0.285\textwidth} % 28.5% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+  % \icon{Globe}{12}{\href{https://example.com}{example.com}}\\
+  \icon{Github}{12}{\href{https://github.com/Mange}{github.com/Mange}}\\
+  \icon{Key}{12}{\href{https://keybase.io/magnusbergmark}{keybase.io/magnusbergmark}}\\
+\end{minipage}
+
+\vspace{0.5cm}
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+
+\cvsect{Who Am I?}
+
+\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+  I am a developer with deep interest in building useful solutions to people's
+  problems. I have a passion for performant code that is maintainable,
+  readable, and fast. There is no perfect tool for every problem, so I try to
+  learn as many tools as possible and master them where appropriate.
+
+  You will find me most skilled in backend services and API design, but I'm
+  also comfortable working in web frontend stacks. If I'm not able to dogfood
+  my own APIs, how can I tell that they deliver value?
+\end{minipage}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+  \textbf{My strongest languages}
+	\begin{barchart}{5.5}
+    \baritem{Ruby}{100}
+    \baritem{HTML/CSS}{70}
+    \baritem{JavaScript}{60}
+    \baritem{Rust}{60}
+    \baritem{Shell}{55}
+    \baritem{PostgreSQL}{50}
+    \baritem{C}{10}
+	\end{barchart}
+\end{minipage}
+
+\begin{center}
+  \bubbles{5/API design, 6/Backend, 4/Frontend, 3/Infra, 2/Networking}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	Philosophy
+%----------------------------------------------------------------------------------------
+
+\cvsect{My development philosophy}
+
+\begin{minipage}[t]{0.4\textwidth} %
+	\vspace{-\baselineskip}
+
+  I follow the ethos of the software craftsman, where the tools used are
+  adjusted according to the situation at hand. Delivering value is most
+  important, then it is making sure that the legacy I leave behind stays
+  valuable for a long time. Solutions and code needs to be maintainable and
+  understandable by as many people as possible. I try to avoid overly clever
+  solutions, and I try to pick conservative tech stacks where appropriate.
+
+  Everything I do is test-driven and I strive for quick feedback cycles, both
+  from colleagues and from users.
+
+  In order to deliver software efficiently, one must also work well among other
+  people. Coding is not a solitary activity, and being able to work together
+  with other people of many different backgrounds and skill levels is
+  important. I enjoy working in this condition and I love sharing knowledge and
+  understanding other people's perspective on things.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+	\vspace{-\baselineskip}
+  \textbf{Mantras}
+  \begin{itemize}
+      \item No code is better than a lot of code.
+      \item Dependencies are expensive, but custom code can be more expensive.
+      \item Explicit is better than implicit.
+      \item Code should be working, maintainable, consistent, fast --- in that order.
+      \item Testing is not optional (but is so much more than just writing test suites).
+      \item Tools should help us. Linters and auto-formatters reduce mental burden.
+      \item Real craftsmen sign their work proudly.
+      \item ``Legacy'' should not be an ugly word; It's what we all leave behind us.
+      \item Most people are well-meaning and knows things I don't know. Don't assume either malice or stupidity.
+  \end{itemize}
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\pagebreak
+\cvsect{Experience}
+
+\begin{entrylist}
+	\entry
+		{Mar 2014 -- Present}
+		{Software developer}
+		{Hemnet}
+    {Hemnet is Sweden's largest property portal and one of the largest websites
+      overall, with millions of unique visitors each week. About 1/4 of the
+      Swedish population visits Hemnet occasionally.\\ I've been working in the
+      Platform team, which deals with internal services, APIs, infrastructure,
+      developer tooling, data storage and retrieval, and developer outreach. My
+      role over the years has involved setting up better test suites, built
+      developer tooling, optimized high-traffic endpoints, secured vulnerable
+      endpoints, among other things. I have been designing the API used by
+      broker systems to send listing data to us, and was part of the team that
+      changed search engine without any downtime or interruption in service.\\
+      I've also been working in other teams, shipping user-facing features and
+      worked a lot on developer training.\\
+      \texttt{Ruby}\slashsep\texttt{Elasticsearch}\slashsep\texttt{Postgres}\slashsep\texttt{GraphQL}\slashsep\texttt{React}\slashsep\texttt{Redis}}
+	\entry
+		{Jan 2013 -- Mar 2014\\\footnotesize{continued from previous}}
+		{Full-stack developer}
+		{Bisnode}
+    {After a merger with Bisnode, my roles changed. I became more focused on
+      teaching agile practices, test-driven development, Ruby/Javascript, and
+      setting up runnable business language specifications using
+      \texttt{Cucumber}.\\ I also worked a bit with Bisnode's rewrite of an
+      older vehicle registration product to a more modern stack with better
+      UX and integrating it with their larger Java-based platform. I was called
+      in for my expertise in Ruby and test-driven development after they picked
+      the stack.\\
+      \texttt{Javascript}\slashsep\texttt{Cucumber}\slashsep\texttt{JRuby}}
+	\entry
+		{Aug 2008 -- Jan 2013}
+		{Full-stack developer}
+		{Newsline Group}
+    {This company was working on search products that indexed most Swedish
+      newspaper and online news articles produced, which lead to a extremely
+      big database of unstructured text. The company specialized in making this
+      huge amount of information searchable and understandable and then tying
+      it to structured data about company statements and facts.\\ I was also
+      managing the older product portfolio while this new product was built.\\
+      Here I managed most of the stack, from Linux server administration and
+      provisioning to the CSS used to render articles in the web interface
+      after you've found what you were looking for. We built a lot of backend
+      software that managed our indices, reindexing and moving around data to
+      keep the searches as fast as possible.\\ Newsline Group was later and
+      merged with Bisnode.\\
+      \texttt{Ruby}\slashsep\texttt{PHP}\slashsep\texttt{Solr}\slashsep\texttt{MySQL}}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\cvsect{Education}
+
+\begin{entrylist}
+	\entry
+		{2006 -- 2008}
+		{Secondary Education}
+		{IT-Gymnasiet Södertörn}
+    {I finished my secondary education of a custom program that combined
+      software development, web design, and natural sciences. I finished with
+      an almost perfect score.}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	OTHER POSITIONS
+%----------------------------------------------------------------------------------------
+
+\cvsect{Other positions}
+
+\begin{entrylist}
+	\entry
+		{2019 -- Present}
+		{Scout leader}
+		{Vendelsö Scoutkår}
+    {I'm currently a Scout leader for my oldest daughter's Scout troop. I've
+      taken some courses in leadership in connection with this.}
+	\entry
+		{2007}
+		{Silver medalist}
+		{Yrkes-SM Webbdesign}
+    {I was competing at the national level in \textit{Yrkes-SM 2007} in the
+      category of Web Design and won a silver medal. This competition was
+      between teens between 18--19 years old, but I competed anyway despite
+      being 17 at the time.}
+	\entry
+		{2006 -- 2008}
+		{Member of IT-council}
+		{IT-Gymnasiet Södertörn}
+    {I was part of my school's IT-council, which helped to setup the IT
+      environment and built some basic tooling regarding registration and
+      visualisation of school events.}
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\cvsect{Languages}
+
+	\textbf{Swedish} - native\\
+	\textbf{English} - proficient
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\cvsect{Hobbies}
+
+  I love playing video games, watching movies, reading, and tinkering with
+  software. I also have a soft spot for playing Airsoft.\\ If possible, I enjoy
+  tring new languages and stacks in my spare time.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\cvsect{Open source}
+
+  I try to build free software in my spare time and sometimes contribute
+  patches to upstream projects. I have contributions accepted into
+  \texttt{rails}, \texttt{rspec}, among others. I also have a pretty popular
+  Ruby gem called \texttt{roadie}.
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%	Tools and skills
+%----------------------------------------------------------------------------------------
+
+\cvsect{Tools and skills}
+
+\begin{minipage}[t]{0.3\textwidth} %
+	\vspace{-\baselineskip}
+
+  \textbf{Languages}
+  \begin{itemize}
+      \item C {\footnotesize (entry-level)}
+      \item C++ {\footnotesize (entry-level)}
+      \item Elm {\footnotesize (entry-level)}
+      \item Go {\footnotesize (entry-level)}
+      \item Javascript / Typescript {\footnotesize (intermediary/expert)}
+      \item PHP {\footnotesize (long time ago)}
+      \item Ruby {\footnotesize (expert)}
+      \item Rust {\footnotesize (intermediary)}
+      \item Shell / Bash {\footnotesize (intermediary)}
+  \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip}
+
+  \textbf{Methodologies}
+  \begin{itemize}
+      \item Agile
+      \item BDD / TDD
+  \end{itemize}
+
+  \textbf{Tools}
+  \begin{itemize}
+      \item Docker
+      \item Git
+      \item GraphQL
+      \item UNIX systems
+      \item Vim
+  \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip}
+
+  \textbf{Services}
+  \begin{itemize}
+      \item AWS
+      \item Elasticsearch
+      \item Jenkins
+      \item Memcached
+      \item PostgreSQL
+      \item Redis
+  \end{itemize}
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
