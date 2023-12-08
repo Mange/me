@@ -78,7 +78,9 @@ body {
   fill: #fbf1c7;
   fill: var(--text);
 
-  font-family: Fira Sans, sans-serif;
+  font-family:
+    Fira Sans,
+    sans-serif;
   font-size: 18px;
   font-weight: 300;
 }
@@ -88,8 +90,11 @@ main {
   margin: 0 auto;
 }
 
-h1, h2 {
-  font-family: Fira Sans, sans-serif;
+h1,
+h2 {
+  font-family:
+    Fira Sans,
+    sans-serif;
   font-weight: 200;
 }
 
@@ -138,6 +143,7 @@ a small {
     "face header"
     "face intro" / 4fr 6fr;
   column-gap: 1em;
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 600px) {
