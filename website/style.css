@@ -131,6 +131,7 @@ a small {
 
 #face {
   width: 100%;
+  clip-path: circle(50% at center);
 }
 
 #face-container {
