@@ -166,12 +166,12 @@
     finding root causes of problems with billing, helping Business Controllers
     and Finance teams with their daily tasks, and much more. The Finance Tech
     team works in the intersection of a lot of different systems at Instabee
-    because data needs to be loaded from many sources in order to generate
+    because data needs to be ingested from many sources in order to generate
     accurate billing information. My main responsibilities was to help with
     reducing technical debt, introduce a more robust testing system and
     building more efficient tools for handling the general support workload.\\
-    \texttt{TypeScript}\slashsep\texttt{PostgreSQL}\slashsep\texttt{MongoDB}\slashsep\texttt{MySQL}\slashsep\texttt{Google
-    Cloud}\slashsep\texttt{Terraform}\slashsep\texttt{Next.js\slashsep\texttt{Netsuite}}\slashsep\texttt{Tanstack}\\
+    \texttt{Node.JS}\slashsep\texttt{TypeScript}\slashsep\texttt{PostgreSQL}\slashsep\texttt{MongoDB}\slashsep\texttt{MySQL}\slashsep\texttt{Google
+    Cloud}\slashsep\texttt{Terraform}\slashsep\texttt{Next.js\slashsep\texttt{Netsuite}}\slashsep\texttt{Tanstack}\slashsep\texttt{Data Ingestion}\\
     \textit{References are available upon request.}
     }
   \entry
@@ -191,8 +191,8 @@
     Since the beginning of 2023 I was working 50\% of my time here, split with
     \textit{Health Integrator}.\\
       \texttt{TypeScript}\slashsep\texttt{Expo}\slashsep\texttt{React
-      Native}\slashsep\texttt{Remix}\slashsep\texttt{Ruby on
-      Rails}\slashsep\texttt{Postgres}\slashsep\texttt{Google
+      Native}\slashsep\texttt{Ruby on
+      Rails}\slashsep\texttt{PostgreSQL}\slashsep\texttt{Google
       Play}\slashsep\texttt{Cloudflare Stream}\\
     \textit{References are available upon request.}
     }
@@ -212,9 +212,9 @@
     and a flexible goal management system.\\
     Since the beginning of 2023 I was working 50\% of my time here, split with
     \textit{Savant}.\\
-      \texttt{TypeScript}\slashsep\texttt{Ruby}\slashsep\texttt{Remix}\slashsep\texttt{Ruby
-      on
-      Rails}\slashsep\texttt{Postgres}\slashsep\texttt{Kubernetes}\slashsep\texttt{Google
+      \texttt{Node.JS}\slashsep\texttt{TypeScript}\slashsep\texttt{Ruby}\slashsep\texttt{Remix
+      aka React Router}\slashsep\texttt{Ruby on
+      Rails}\slashsep\texttt{PostgreSQL}\slashsep\texttt{Kubernetes}\slashsep\texttt{Google
       Cloud}\slashsep\texttt{WebRTC}\\
     \textit{References are available upon request.}
     }
@@ -226,7 +226,7 @@
       working here I was part of the team that worked on software that
       administrated and oversees the manufacturing and shipping of personalized
       medication.\\
-      \texttt{Ruby}\slashsep\texttt{Postgres}\slashsep\texttt{MSSQL}\slashsep\texttt{Vue}}
+      \texttt{Ruby}\slashsep\texttt{PostgreSQL}\slashsep\texttt{MSSQL}\slashsep\texttt{Vue}}
   \entry
     {Mar 2014 -- Jun 2020}
     {Software developer}
@@ -238,12 +238,16 @@
       developer tooling, data storage and retrieval, and developer outreach. My
       role over the years has involved setting up better test suites, built
       developer tooling, optimized high-traffic endpoints, secured vulnerable
-      endpoints, among other things. I have been designing the API used by
-      broker systems to send listing data to us, and was part of the team that
-      changed search engine without any downtime or interruption in service.\\
-      I've also been working in other teams, shipping user-facing features and
-      worked a lot on developer training.\\
-      \texttt{Ruby}\slashsep\texttt{Elasticsearch}\slashsep\texttt{Postgres}\slashsep\texttt{GraphQL}\slashsep\texttt{React}\slashsep\texttt{Redis}}
+      endpoints, among other things. I have been designing and implementing the
+      API used by broker systems to send listing data to us. I was also a key
+      part of the team that implemented a fulltext search engine using
+      Elasticsearch without any downtime or interruption in service in order to
+      replace old SQL-based searching. We also planned the replacement of
+      SQL-based watchlists with Elasticsearch Percolate queries.\\ I've also
+      been
+      working in other teams, shipping user-facing features and worked a lot on
+      developer training.\\
+      \texttt{Ruby}\slashsep\texttt{Ruby on Rails}\slashsep\texttt{Elasticsearch}\slashsep\texttt{Lucene}\slashsep\texttt{PostgreSQL}\slashsep\texttt{GraphQL}\slashsep\texttt{React}\slashsep\texttt{Redis}}
   \entry
     {Jan 2013 -- Mar 2014\\\footnotesize{continued from previous}}
     {Full-stack developer}
@@ -269,10 +273,11 @@
       managing the older product portfolio while this new product was built.\\
       Here I managed most of the stack, from Linux server administration and
       provisioning to the CSS used to render articles in the web interface
-      after you've found what you were looking for. We built a lot of backend
-      software that managed our indices, reindexing and moving around data to
-      keep the searches as fast as possible.\\ Newsline Group was later and
-      merged with Bisnode.\\
+      after you've found what you were looking for.\\ We built a custom backend
+      for search based on \texttt{Apache Solr} and \texttt{Lucene}, managing
+      merging and rebalancing of indices and shards. Later after
+      \texttt{Elasticsearch} was released, we moved over part of the backend to
+      using that instead.\\ Newsline Group was later and merged with Bisnode.\\
       \texttt{Ruby}\slashsep\texttt{PHP}\slashsep\texttt{Solr}\slashsep\texttt{MySQL}}
 \end{entrylist}
 
@@ -398,7 +403,7 @@
       \item Docker
       \item Git
       \item GraphQL
-      \item UNIX systems
+      \item Linux and UNIX systems
       \item Vim
       \item Nix
   \end{itemize}
@@ -409,12 +414,12 @@
 
   \textbf{Services}
   \begin{itemize}
-      \item AWS
-      \item GCP
+      \item Amazon Web Services (AWS)
+      \item Google Cloud Platform (GCP)
       \item Kubernetes
-      \item Elasticsearch
+      \item Elasticsearch / Open Search
       \item PostgreSQL
-      \item Redis
+      \item Redis / Valkey
   \end{itemize}
 \end{minipage}
 
