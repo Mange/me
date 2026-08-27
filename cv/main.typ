@@ -3,8 +3,9 @@
 #set page(
   paper: "a4",
   margin: (top: 1.75cm, bottom: 1.75cm, left: 2cm, right: 2cm),
+  fill: platinum,
 )
-#set text(font: "Raleway", size: 9pt, fill: black)
+#set text(font: "Raleway", size: 9pt, fill: color-text)
 #set par(justify: true)
 #set list(tight: false, indent: 1em)
 
@@ -27,18 +28,18 @@
     #stack(
       dir: ttb,
       spacing: 1pt,
-      icon(ico-map-marker, "Stockholm, Sweden"),
-      icon(ico-phone, "+46 70 43 777 42"),
-      icon(ico-at, link("mailto:me@mange.dev")[me\@mange.dev]),
+      icon-text(ico-map-marker, "Stockholm, Sweden"),
+      icon-text(ico-phone, "+46 70 43 777 42"),
+      icon-text(ico-at, link("mailto:me@mange.dev")[me\@mange.dev]),
     )
   ],
   [
     #stack(
       dir: ttb,
       spacing: 1pt,
-      icon(ico-globe, link("https://mange.dev")[mange.dev]),
-      icon(ico-github, link("https://github.com/Mange")[github.com/Mange]),
-      icon(ico-keybase, link("https://keybase.io/magnusbergmark")[keybase.io/magnusbergmark], font: fa-brands),
+      icon-text(ico-globe, link("https://mange.dev")[mange.dev]),
+      icon-text(ico-github, link("https://github.com/Mange")[github.com/Mange]),
+      icon-text(ico-keybase, link("https://keybase.io/magnusbergmark")[keybase.io/magnusbergmark], font: fa-brands),
     )
   ],
 )
@@ -66,14 +67,14 @@
     own APIs, how can I tell that they deliver value?
   ],
   [
-    *My strongest languages*
+    #text(weight: "bold", fill: color-primary)[Where I am strongest]
     #bar-chart((
       ("Ruby", 100),
-      ("TypeScript/JavaScript", 92),
+      ("Javascript/Typescript", 92),
       ("Rust", 90),
-      ("HTML/CSS", 87),
+      ("HTML / CSS", 87),
       ("PostgreSQL", 78),
-      ("Shell", 70),
+      ("Shell / Bash", 70),
       ("Terraform", 20),
     ))
   ],
@@ -111,7 +112,7 @@
     on things.
   ],
   [
-    *Mantras*
+    #text(weight: "bold", fill: color-primary)[Mantras]
     - No code is better than a lot of code.
     - Dependencies are expensive, but custom code can be more expensive.
     - Explicit is better than implicit.
@@ -158,9 +159,17 @@
     tools for handling the general support workload.
 
     #techstack((
-      "Node.JS", "TypeScript", "PostgreSQL", "MongoDB", "MySQL",
-      "Google Cloud", "Terraform", "Next.js", "Netsuite", "Tanstack",
-      "Data Ingestion",
+      p-data-ingestion,
+      p-gcp,
+      p-mongodb,
+      p-mysql,
+      p-netsuite,
+      p-nextjs,
+      p-nodejs,
+      p-postgres,
+      p-tanstack,
+      p-terraform,
+      p-ts,
     ))
 
     _References are available upon request._
@@ -188,8 +197,13 @@
     with _Health Integrator_.
 
     #techstack((
-      "TypeScript", "Expo", "React Native", "Ruby on Rails", "PostgreSQL",
-      "Google Play", "Cloudflare Stream",
+      p-cloudflare-stream,
+      p-expo,
+      p-google-play,
+      p-postgres,
+      p-rails,
+      p-react-native,
+      p-ts,
     ))
 
     _References are available upon request._
@@ -219,8 +233,15 @@
     with _Savant_.
 
     #techstack((
-      "Node.JS", "TypeScript", "Ruby", "Remix aka React Router",
-      "Ruby on Rails", "PostgreSQL", "Kubernetes", "Google Cloud", "WebRTC",
+      p-gcp,
+      p-kubernetes,
+      p-nodejs,
+      p-postgres,
+      p-rails,
+      p-remix,
+      p-ruby,
+      p-ts,
+      p-webrtc,
     ))
 
     _References are available upon request._
@@ -237,7 +258,12 @@
     administrated and oversees the manufacturing and shipping of
     personalized medication.
 
-    #techstack(("Ruby", "PostgreSQL", "MSSQL", "Vue"))
+    #techstack((
+      p-mssql,
+      p-postgres,
+      p-ruby,
+      p-vue,
+    ))
   ],
 )
 
@@ -267,8 +293,14 @@
     and worked a lot on developer training.
 
     #techstack((
-      "Ruby", "Ruby on Rails", "Elasticsearch", "Lucene", "PostgreSQL",
-      "GraphQL", "React", "Redis",
+      p-elasticsearch,
+      p-graphql,
+      p-lucene,
+      p-postgres,
+      p-rails,
+      p-react,
+      p-redis,
+      p-ruby,
     ))
   ],
 )
@@ -281,7 +313,7 @@
     After a merger with Bisnode, my roles changed. I became more focused
     on teaching agile practices, test-driven development,
     Ruby/Javascript, and setting up runnable business language
-    specifications using #raw("Cucumber").
+    specifications using Cucumber.
 
     I also worked a bit with Bisnode's rewrite of an older vehicle
     registration product to a more modern stack with better UX and
@@ -289,7 +321,11 @@
     for my expertise in Ruby and test-driven development after they
     picked the stack.
 
-    #techstack(("Javascript", "Cucumber", "JRuby"))
+    #techstack((
+      p-cucumber,
+      p-jruby,
+      p-js,
+    ))
   ],
 )
 
@@ -298,28 +334,32 @@
   [Full-stack developer],
   [Newsline Group],
   [
-    This company was working on search products that indexed most
-    Swedish newspaper and online news articles produced, which lead to a
-    extremely big database of unstructured text. The company specialized
-    in making this huge amount of information searchable and
-    understandable and then tying it to structured data about company
-    statements and facts.
+    This company was working on search products that indexed most Swedish
+    newspaper and online news articles produced, which lead to a extremely big
+    database of unstructured text. The company specialized in making this huge
+    amount of information searchable and understandable and then tying it to
+    structured data about company statements and facts.
 
-    I was also managing the older product portfolio while this new
-    product was built.
+    I was also managing the older product portfolio while this new product was
+    built.
 
-    Here I managed most of the stack, from Linux server administration
-    and provisioning to the CSS used to render articles in the web
-    interface after you've found what you were looking for.
+    Here I managed most of the stack, from Linux server administration and
+    provisioning to the CSS used to render articles in the web interface after
+    you've found what you were looking for.
 
-    We built a custom backend for search based on #raw("Apache Solr") and
-    #raw("Lucene"), managing merging and rebalancing of indices and
-    shards. Later after #raw("Elasticsearch") was released, we moved over
-    part of the backend to using that instead.
+    We built a custom backend for search based on Apache Solr and Lucene,
+    managing merging and rebalancing of indices and shards. Later after
+    Elasticsearch was released, we moved over part of the backend to using that
+    instead.
 
     Newsline Group was later and merged with Bisnode.
 
-    #techstack(("Ruby", "PHP", "Solr", "MySQL"))
+    #techstack((
+      p-mysql,
+      p-php,
+      p-ruby,
+      p-solr,
+    ))
   ],
 )
 
@@ -425,37 +465,39 @@
   align: (top, top, top),
   [
     *Languages*
-    - C #text(size: 8pt)[(entry-level)]
-    - Go #text(size: 8pt)[(entry-level)]
-    - JavaScript / TypeScript #text(size: 8pt)[(expert)]
-    - Python #text(size: 8pt)[(entry-level)]
-    - Ruby #text(size: 8pt)[(expert)]
-    - Rust #text(size: 8pt)[(advanced)]
-    - SQL #text(size: 8pt)[(advanced)]
-    - Shell / Bash #text(size: 8pt)[(advanced)]
-    - Terraform #text(size: 8pt)[(intermediate)]
+    - #p-c #text(size: 6pt)[(entry-level)]
+    - #p-golang #text(size: 6pt)[(entry-level)]
+    - #p-js #text(size: 6pt)[(expert)]
+    - #p-python #text(size: 6pt)[(entry-level)]
+    - #p-ruby #text(size: 6pt)[(expert)]
+    - #p-rust #text(size: 6pt)[(advanced)]
+    - #p-shell #text(size: 6pt)[(advanced)]
+    - #p-sql #text(size: 6pt)[(advanced)]
+    - #p-terraform #text(size: 6pt)[(intermediate)]
+    - #p-ts #text(size: 6pt)[(expert)]
   ],
   [
     *Methodologies*
-    - Agile
-    - BDD / TDD
-    - Pair programming
+    - #p-agile
+    - #p-bdd
+    - #p-pairing
+    - #p-data-ingestion
 
     *Tools*
-    - Docker
-    - Git
-    - GraphQL
-    - Linux and UNIX systems
-    - Vim
-    - Nix
+    - #p-docker
+    - #p-git
+    - #p-graphql
+    - #p-linux and #p-unix
+    - #p-nix
+    - #p-vim
   ],
   [
     *Services*
-    - Amazon Web Services (AWS)
-    - Google Cloud Platform (GCP)
-    - Kubernetes
-    - Elasticsearch / Open Search
-    - PostgreSQL
-    - Redis / Valkey
+    - #p-aws (Amazon Web Services)
+    - #p-elasticsearch / #p-opensearch
+    - #p-gcp (Google Cloud Platform)
+    - #p-kubernetes
+    - #p-postgres
+    - #p-redis / #p-valkey
   ],
 )
