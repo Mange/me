@@ -48,8 +48,13 @@
   )
 ]
 
+// Pill-like rendering of something.
+#let pill(content) = box(fill: black, radius: 100%, inset: (x: 5pt, y: 3pt))[
+  #text(fill: white, size: 8pt)[#content]
+]
+
 // Monospaced tech-stack list, e.g. techstack(("Ruby", "PostgreSQL")).
-#let techstack(items) = items.map(raw).join([ #h(3mm)/#h(3mm) ])
+#let techstack(items) = par(justify: false)[ #items.map(pill).join([ ]) ]
 
 // Horizontal bar chart. items: array of (label, percent-of-max-width).
 #let bar-chart(items, max-width: 5.5cm, bar-height: 0.35cm, gap: 2pt) = grid(
