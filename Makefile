@@ -1,11 +1,6 @@
 .PHONY: all
 
-cv.pdf: cv cv/main.tex cv/developercv.cls
-	@texi2pdf \
-		--quiet \
-		--tidy --build-dir=cv/main.t2d \
-		-I cv \
-		--output=cv.pdf \
-		cv/main.tex
+cv.pdf: cv cv/main.typ cv/lib.typ cv/fonts
+	@typst compile --font-path cv/fonts cv/main.typ cv.pdf
 
 all: | cv.pdf

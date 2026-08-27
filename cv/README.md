@@ -1,6 +1,12 @@
-My CV. It's based on this LaTeX template, released under the MIT license (see
-`LICENSE.md`):
+My CV, authored in [Typst](https://typst.app/).
 
-https://www.latextemplates.com/template/developer-cv
+It's based on a LaTeX template named ["Developer
+CV"](https://www.latextemplates.com/template/developer-cv).
 
-Build cv with `make cv.pdf` in project root.
+## Fonts
+
+`fonts/raleway/` and `fonts/font-awesome/` are vendored copies of the Raleway
+and Font Awesome Free font files, both licensed under the SIL Open Font License
+1.1 (see the `OFL.md`/`LICENSE.txt` files in each directory). The OFL permits
+bundling and redistributing the fonts with other software, which is what's
+happening here.
