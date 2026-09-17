@@ -1,0 +1,204 @@
+@import "@catppuccin/palette/css/catppuccin.css";
+
+:root {
+	/* App variables */
+	--container-width: min(90ch, calc(100% - 2ch));
+
+	/* Use Mocha for dark mode */
+	--color-base: var(--ctp-mocha-base);
+	--color-text: var(--ctp-mocha-text);
+	--color-crust: var(--ctp-mocha-crust);
+	--color-mantle: var(--ctp-mocha-mantle);
+	--color-surface0: var(--ctp-mocha-surface0);
+	--color-surface1: var(--ctp-mocha-surface1);
+	--color-surface2: var(--ctp-mocha-surface2);
+	--color-white: var(--ctp-mocha-subtext0);
+	--color-black: var(--ctp-mocha-surface1);
+	--color-red: var(--ctp-mocha-red);
+	--color-green: var(--ctp-mocha-green);
+	--color-yellow: var(--ctp-mocha-yellow);
+	--color-blue: var(--ctp-mocha-blue);
+	--color-pink: var(--ctp-mocha-pink);
+	--color-teal: var(--ctp-mocha-teal);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		/* Use Latte for light mode */
+		--color-base: var(--ctp-latte-base);
+		--color-text: var(--ctp-latte-text);
+		--color-crust: var(--ctp-latte-crust);
+		--color-mantle: var(--ctp-latte-mantle);
+		--color-surface0: var(--ctp-latte-surface0);
+		--color-surface1: var(--ctp-latte-surface1);
+		--color-surface2: var(--ctp-latte-surface2);
+		--color-white: var(--ctp-latte-surface2);
+		--color-black: var(--ctp-latte-subtext1);
+		--color-red: var(--ctp-latte-red);
+		--color-green: var(--ctp-latte-green);
+		--color-yellow: var(--ctp-latte-yellow);
+		--color-blue: var(--ctp-latte-blue);
+		--color-pink: var(--ctp-latte-pink);
+		--color-teal: var(--ctp-latte-teal);
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "JetBrains Mono", monospace;
+	font-optical-sizing: auto;
+	font-style: normal;
+
+	background-color: var(--color-base);
+	color: var(--color-text);
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+main {
+	margin: 4ch auto;
+	width: var(--container-width);
+}
+
+a {
+	color: var(--color-blue);
+	text-decoration: underline;
+
+	&:visited {
+		color: var(--color-pink);
+	}
+
+	&:hover {
+		color: var(--color-teal);
+	}
+}
+
+p {
+	margin: 0;
+}
+
+h1 {
+	font-size: inherit;
+	background-color: var(--color-blue);
+	color: var(--color-base);
+	padding: 1ch;
+}
+
+.h1-alternative {
+	color: var(--color-blue);
+	display: none;
+}
+
+@media (min-width: 600px) {
+	h1 {
+		display: none;
+	}
+	.h1-alternative {
+		display: block;
+	}
+}
+
+h2 {
+	clear: both;
+	font-size: inherit;
+	background-color: var(--color-white);
+	color: var(--color-base);
+	padding: 1ch;
+}
+
+ul {
+	padding: 0;
+}
+
+ul > li {
+	list-style: "- ";
+	list-style-position: inside;
+}
+
+dl {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	column-gap: 1ch;
+}
+
+dt {
+	color: var(--color-green);
+	text-align: right;
+}
+
+dd {
+	padding: 0;
+	margin: 0;
+}
+
+hr {
+	border-style: dashed;
+	border-color: var(--color-black);
+}
+
+.caret {
+	display: inline-block;
+	background-color: var(--color-text);
+}
+
+.keyword:nth-child(1) {
+	font-weight: normal;
+	color: var(--color-blue);
+}
+
+.keyword:nth-child(2) {
+	color: var(--color-pink);
+}
+
+.keyword:nth-child(3) {
+	color: var(--color-teal);
+}
+
+.keyword:nth-child(4) {
+	color: var(--color-green);
+}
+
+.dim {
+	color: var(--color-black);
+
+	a,
+	a:visited {
+		color: var(--color-black);
+	}
+}
+
+.group {
+	display: flex;
+	flex-direction: row;
+	gap: 1ch;
+}
+
+#profile-photo {
+	float: right;
+	width: calc(324px / 2);
+	height: calc(377px / 2);
+}
+
+@media (min-width: 1024px) {
+	body {
+		font-size: 1.5rem;
+	}
+	#profile-photo {
+		width: 324px;
+		height: 377px;
+	}
+}

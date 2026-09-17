@@ -1,0 +1,36 @@
+{
+  "name": "website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --port 3000",
+    "generate-routes": "tsr generate",
+    "build": "vite build",
+    "start": "node .output/server/index.mjs",
+    "preview": "vite preview",
+    "format": "biome format",
+    "lint": "biome lint",
+    "check": "biome check"
+  },
+  "dependencies": {
+    "@catppuccin/palette": "^1.8.0",
+    "@react95/fonts": "^1.0.1",
+    "@tanstack/markdown": "^0.0.15",
+    "@tanstack/solid-router": "latest",
+    "@tanstack/solid-start": "latest",
+    "solid-js": "^1.9.12"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.5",
+    "@tanstack/router-cli": "^1.133.21",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.0",
+    "vite-plugin-solid": "^2.11.12"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "lightningcss"
+    ]
+  }
+}

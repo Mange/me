@@ -1,0 +1,178 @@
+.tmux-bar {
+	--bg-level-0: var(--color-mantle);
+	--bg-level-1: var(--color-surface0);
+	--bg-level-2: var(--color-surface1);
+	--bg-level-3: var(--color-surface2);
+	--bg-level-4: var(--color-blue);
+
+	--fg-level-0: var(--color-text);
+	--fg-level-1: var(--color-text);
+	--fg-level-2: var(--color-text);
+	--fg-level-3: var(--color-text);
+	--fg-level-4: var(--color-mantle);
+
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	background-color: var(--color-mantle);
+	color: var(--color-text);
+
+	white-space: nowrap;
+
+	.content {
+		display: flex;
+		margin: 0 auto;
+		width: var(--container-width, 100%);
+	}
+
+	.left,
+	.right {
+		display: flex;
+	}
+
+	.right {
+		margin-left: auto;
+
+		visibility: hidden;
+		@media (min-width: 1024px) {
+			visibility: visible;
+		}
+	}
+}
+
+.section,
+.chevron {
+	&[data-level="0"] {
+		--bg: var(--bg-level-0);
+		--fg: var(--fg-level-0);
+	}
+
+	&[data-level="1"] {
+		--bg: var(--bg-level-1);
+		--fg: var(--fg-level-1);
+	}
+
+	&[data-level="2"] {
+		--bg: var(--bg-level-2);
+		--fg: var(--fg-level-2);
+	}
+
+	&[data-level="3"] {
+		--bg: var(--bg-level-3);
+		--fg: var(--fg-level-3);
+	}
+
+	&[data-level="4"] {
+		--bg: var(--bg-level-4);
+		--fg: var(--fg-level-4);
+	}
+}
+
+.section {
+	padding-inline: 1ch;
+	background-color: var(--bg);
+	color: var(--fg);
+}
+
+.chevron {
+	width: 1ch;
+	height: 100%;
+	background-color: var(--bg);
+	position: relative;
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		width: 1px;
+		height: 100%;
+		background-color: var(--fg);
+	}
+
+	&::before {
+		transform: rotate(45deg);
+	}
+	&::after {
+		transform: rotate(-45deg);
+	}
+
+	&[data-dir="left"] {
+		/* Mirror it */
+		transform: scaleX(-1);
+	}
+}
+
+.pyramid {
+	& > div {
+		width: 1ch;
+		height: 100%;
+	}
+
+	&[data-dir="left"] {
+		background-color: var(--to-bg);
+		& > div {
+			clip-path: polygon(0 0, 100% 50%, 0 100%);
+			background-color: var(--from-bg);
+		}
+	}
+
+	&[data-dir="right"] {
+		background-color: var(--from-bg);
+		& > div {
+			clip-path: polygon(100% 0, 0 50%, 100% 100%);
+			background-color: var(--to-bg);
+		}
+	}
+
+	&[data-from="0"] {
+		--from-bg: var(--bg-level-0);
+		--from-fg: var(--fg-level-0);
+	}
+
+	&[data-from="1"] {
+		--from-bg: var(--bg-level-1);
+		--from-fg: var(--fg-level-1);
+	}
+
+	&[data-from="2"] {
+		--from-bg: var(--bg-level-2);
+		--from-fg: var(--fg-level-2);
+	}
+
+	&[data-from="3"] {
+		--from-bg: var(--bg-level-3);
+		--from-fg: var(--fg-level-3);
+	}
+
+	&[data-from="4"] {
+		--from-bg: var(--bg-level-4);
+		--from-fg: var(--fg-level-4);
+	}
+
+	&[data-to="0"] {
+		--to-bg: var(--bg-level-0);
+		--to-fg: var(--fg-level-0);
+	}
+
+	&[data-to="1"] {
+		--to-bg: var(--bg-level-1);
+		--to-fg: var(--fg-level-1);
+	}
+
+	&[data-to="2"] {
+		--to-bg: var(--bg-level-2);
+		--to-fg: var(--fg-level-2);
+	}
+
+	&[data-to="3"] {
+		--to-bg: var(--bg-level-3);
+		--to-fg: var(--fg-level-3);
+	}
+
+	&[data-to="4"] {
+		--to-bg: var(--bg-level-4);
+		--to-fg: var(--fg-level-4);
+	}
+}

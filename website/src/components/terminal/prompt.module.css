@@ -1,0 +1,11 @@
+.user {
+	color: var(--color-green);
+}
+
+.dir {
+	color: var(--color-blue);
+}
+
+.symbol {
+	color: var(--color-pink);
+}
