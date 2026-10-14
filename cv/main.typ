@@ -1,4 +1,6 @@
 #import "lib.typ": *
+#import "pills.typ": *
+#import "icons.typ": *
 
 #set page(
   paper: "a4",
