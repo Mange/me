@@ -495,9 +495,9 @@
   ],
   [
     *Services*
-    - #p-aws (Amazon Web Services)
+    - #p-aws #text(size: 6pt)[(Amazon Web Services)]
     - #p-elasticsearch / #p-opensearch
-    - #p-gcp (Google Cloud Platform)
+    - #p-gcp #text(size: 6pt)[(Google Cloud Platform)]
     - #p-kubernetes
     - #p-postgres
     - #p-redis / #p-valkey
