@@ -69,8 +69,8 @@
   [
     #text(weight: "bold", fill: color-primary)[Where I am strongest]
     #bar-chart((
-      ("Ruby", 100),
-      ("Javascript/Typescript", 92),
+      ("Javascript/Typescript", 100),
+      ("Ruby", 98),
       ("Rust", 90),
       ("HTML / CSS", 87),
       ("PostgreSQL", 78),
