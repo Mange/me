@@ -25,7 +25,7 @@
 
 // A dated entry: left column for the date(s), right column for a bold title,
 // a right-aligned qualifier, and a description body.
-#let entry(dates, title, org, body) = block(below: 2em)[
+#let entry(dates, title, org, body) = block(below: 2em, breakable: false)[
   #grid(
     columns: (20%, 80%),
     align: (top, top),
