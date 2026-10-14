@@ -62,11 +62,11 @@
 // Tool pills
 #let p-docker = tool-pill("Docker", icon: icon(ico-docker, font: fa-brands))
 #let p-git = tool-pill("Git", icon: icon(ico-git-alt, font: fa-brands))
+#let p-graphql = tool-pill("GraphQL", icon: icon(ico-nodes))
 #let p-linux = tool-pill("Linux", icon: icon(ico-linux, font: fa-brands))
-#let p-nix = tool-pill("Nix")
+#let p-nix = tool-pill("Nix", icon: icon(ico-snowflake))
 #let p-unix = tool-pill("UNIX systems")
 #let p-vim = tool-pill("Vim", icon: icon(ico-vim, font: fa-brands))
-#let p-graphql = tool-pill("GraphQL")
 
 // Service pills
 #let p-aws = service-pill("AWS", icon: icon(ico-aws, font: fa-brands))

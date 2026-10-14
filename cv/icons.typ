@@ -13,7 +13,9 @@
 #let ico-globe = "\u{f0ac}"
 #let ico-map-marker = "\u{f3c5}"
 #let ico-mobile-screen-button = "\u{f3cd}"
+#let ico-nodes = "\u{e4e2}"
 #let ico-phone = "\u{f095}"
+#let ico-snowflake = "\u{f2dc}"
 #let ico-terminal= "\u{f120}"
 
 // FontAwesome Brands codepoints.
